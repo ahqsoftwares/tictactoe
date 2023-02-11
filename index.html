@@ -11,7 +11,7 @@
       const userIsDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
       const icon = document.getElementById("icon");
 
-      icon.setAttribute("href", `/${userIsDark ? "dark" : "light"}.png`);
+      icon.setAttribute("href", `https://ahqsoftwares.github.io/tictactoe/${userIsDark ? "dark" : "light"}.png`);
     }
     setInterval(() => {
       darkOrLight();
