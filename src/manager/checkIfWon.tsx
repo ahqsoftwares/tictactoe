@@ -27,7 +27,9 @@ export default function checkIfWon(board: string[]): {won: boolean, by: string} 
                   }
          }
 
-         console.log(matched, wonBy);
+         if (board.filter((value) => value === "").length === 0) {
+                  matched = true;
+         }
 
          return {
                   won: matched,
