@@ -13,14 +13,17 @@
 
       icon.setAttribute("href", `https://ahqsoftwares.github.io/tictactoe/${userIsDark ? "dark" : "light"}.png`);
     }
-    setInterval(() => {
-      darkOrLight();
-    }, 1000);
+    
+    window.matchMedia("(prefers-color-scheme: dark)")
+      .addEventListener("change", () => {
+        darkOrLight();
+      });
     
     darkOrLight();
   </script>
-  <body class="dark:bg-gray-900 dark:text-white">
-    <div id="root"></div>
+  <body class="w-full h-screen dark:bg-gray-900 dark:text-white">
+    <!-- Main Content Goes here -->
+    <main></main>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
