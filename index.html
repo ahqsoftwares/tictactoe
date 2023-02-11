@@ -9,7 +9,7 @@
   <script defer>
     function darkOrLight() {
       const userIsDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-      const icon = document.getElementById("icon");
+      const icon = document.querySelector('link[rel="icon"]');
 
       icon.setAttribute("href", `/${userIsDark ? "dark" : "light"}.png`);
     }
