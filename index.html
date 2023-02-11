@@ -2,14 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" id="icon" type="image/png" href="/dark.png" />
+    <link rel="icon" type="image/png" href="/dark.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tic Tac Toe</title>
   </head>
   <script defer>
     function darkOrLight() {
       const userIsDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-      const icon = document.getElementById("icon");
+      const icon = document.querySelector('link[rel="icon"]');
 
       icon.setAttribute("href", `https://ahqsoftwares.github.io/tictactoe/${userIsDark ? "dark" : "light"}.png`);
     }
